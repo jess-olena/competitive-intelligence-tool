@@ -1,0 +1,65 @@
+# ── Anthropic ──────────────────────────────────────────────────────────────
+anthropic>=0.40.0                  # Claude API SDK (messages, streaming, tool use)
+ollama>=0.3.0                      # Local model inference via Ollama
+
+# ── Vector Store ───────────────────────────────────────────────────────────
+chromadb>=0.5.0                    # Local vector database for embeddings
+voyageai>=0.3.0                    # Voyage AI embeddings (best for financial text)
+
+# ── Data Ingestion ─────────────────────────────────────────────────────────
+requests>=2.32.0                   # HTTP client for EDGAR and News APIs
+httpx>=0.27.0                      # Async HTTP client (used by edgar_client)
+beautifulsoup4>=4.12.0             # HTML parsing for EDGAR filing documents
+lxml>=5.2.0                        # Fast XML/HTML parser backend for BS4
+feedparser>=6.0.11                 # RSS feed parsing for news sources
+python-dateutil>=2.9.0             # Robust date parsing from filing metadata
+
+# ── Data Validation & Modeling ─────────────────────────────────────────────
+pydantic>=2.7.0                    # Data models, validation, and serialization
+pydantic-settings>=2.3.0           # Settings management from env vars / .env file
+
+# ── Database ───────────────────────────────────────────────────────────────
+# SQLite is part of Python stdlib — no extra package needed
+sqlalchemy>=2.0.30                 # ORM + query builder over SQLite
+alembic>=1.13.0                    # SQLite schema migrations
+
+# ── Text Processing ────────────────────────────────────────────────────────
+tiktoken>=0.7.0                    # Token counting for context window management
+langchain-text-splitters>=0.2.0    # Semantic and recursive text chunking utilities
+markdown-it-py>=3.0.0             # Parse markdown profiles into structured sections
+nltk>=3.8.1                        # Sentence tokenization for semantic chunking
+
+# ── Financial Parsing ──────────────────────────────────────────────────────
+
+# ── API Server (optional) ──────────────────────────────────────────────────
+fastapi>=0.115.0                   # REST API framework
+uvicorn[standard]>=0.30.0          # ASGI server for FastAPI
+python-multipart>=0.0.9            # Multipart form support (file uploads)
+
+# ── CLI ────────────────────────────────────────────────────────────────────
+typer[all]>=0.12.0                 # CLI framework with auto-help and type hints
+rich>=13.7.0                       # Terminal formatting, progress bars, tables
+
+# ── Observability ──────────────────────────────────────────────────────────
+loguru>=0.7.2                      # Structured logging with file rotation
+tenacity>=8.3.0                    # Retry logic with exponential backoff
+
+# ── Sentiment Analysis ─────────────────────────────────────────────────────
+textblob>=0.18.0                   # Lightweight sentiment scoring baseline
+vaderSentiment>=3.3.2              # Finance-tuned lexicon sentiment (VADER)
+langdetect>=1.0.9                  # Language detection for non-English articles
+
+# ── Testing ────────────────────────────────────────────────────────────────
+pytest>=8.2.0                      # Test runner
+pytest-asyncio>=0.23.0             # Async test support
+pytest-cov>=5.0.0                  # Coverage reporting
+respx>=0.21.0                      # Mock httpx requests in tests
+factory-boy>=3.3.0                 # Test fixture factories
+
+# ── Dev / Code Quality ─────────────────────────────────────────────────────
+ruff>=0.4.0                        # Linting and formatting (replaces black+flake8)
+mypy>=1.10.0                       # Static type checking
+python-dotenv>=1.0.1               # Load .env into os.environ for local dev
+
+# ----------------- Live Demo----------------------------------------------------
+streamlit>=1.32.0                  # Web UI for live demo
